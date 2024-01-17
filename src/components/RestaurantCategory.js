@@ -2,8 +2,6 @@ import React from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
-  //console.log(data);
-
   const handleToggle = () => {
     setShowIndex();
   };

@@ -6,8 +6,6 @@ import { addItems } from "../utils/cartSlice";
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
 
-  console.log(items);
-
   const handleClick = (item) => {
     dispatch(addItems(item));
   };

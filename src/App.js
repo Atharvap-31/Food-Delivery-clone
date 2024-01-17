@@ -70,11 +70,11 @@ const appRoute = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/about/",
+        path: "/about",
         element: <About />,
       },
       {
-        path: "/contact/",
+        path: "/contact",
         element: (
           <Suspense fallback={<h1>LOADING CONTACTS WAIT FOR SOME SEC.....</h1>}>
             <Contact />

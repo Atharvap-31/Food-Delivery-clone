@@ -1,6 +1,6 @@
 import RestaurantCard, { withLabelOffer } from "./RestaurantCard";
 import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer";
+
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { Link } from "react-router-dom";
 
@@ -9,27 +9,23 @@ const Body = () => {
   const [filterRes, setFilterRes] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
-  // const RestaurantCardOffer = withLabelOffer(RestaurantCard);
-
-  console.log(resCard);
-
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.0987398&lng=79.0772159&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D13.0035068%26lng%3D77.5890953%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
 
     setResCard(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
 
     setFilterRes(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
