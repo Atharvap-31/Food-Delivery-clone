@@ -26,7 +26,9 @@ const ItemList = ({ items }) => {
               </p>
               <p className="font-semibold">{item.card.info.name}</p>
               <p className="mb-7 font-semibold">
-                ₹{item.card.info.price / 100}
+                ₹{" "}
+                {item.card.info.price / 100 ||
+                  item.card.info.defaultPrice / 100}
               </p>
               <p>{item.card.info.description}</p>
             </div>
