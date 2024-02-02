@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { CDN_URL } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addItems } from "../utils/cartSlice";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, handleItem }) => {
   const dispatch = useDispatch();
 
   const handleClick = (item) => {
